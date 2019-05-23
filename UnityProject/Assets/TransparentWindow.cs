@@ -88,7 +88,7 @@ public class TransparentWindow : MonoBehaviour
             {
 #if !UNITY_EDITOR
                 SetWindowLong (hwnd, -20, (uint)524288 | (uint)32);
-                SetLayeredWindowAttributes (hwnd, 0xFF00FF, 100 , 2);// Transparency=51=20%, LWA_ALPHA=2
+                SetLayeredWindowAttributes (hwnd, 0xFF00FF, 255 , 2);// Transparency=51=20%, LWA_ALPHA=2
                 SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, fWidth, fHeight, 32 | 64); //SWP_FRAMECHANGED = 0x0020 (32); //SWP_SHOWWINDOW = 0x0040 (64)
 #endif
             }
